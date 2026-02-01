@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://t3medc2cxsgh" path="res://scenes/Platform.tscn" id="5_8ln24"]
 [ext_resource type="PackedScene" uid="uid://1caqgxev5j52" path="res://scenes/OneWayDown.tscn" id="6_rtw2f"]
 [ext_resource type="FontFile" uid="uid://buv25bl2jqk2j" path="res://assets/fonts/PixelOperator8.ttf" id="7_oa1go"]
+[ext_resource type="PackedScene" uid="uid://bu7yxm61aiqhf" path="res://scenes/Fade.tscn" id="8_tbmy8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wu84c"]
 texture = ExtResource("3_bqqt6")
@@ -144,6 +145,41 @@ sources/0 = SubResource("TileSetAtlasSource_wu84c")
 [node name="Main Menu" type="Node2D" unique_id=1899467654]
 script = ExtResource("1_l6cm7")
 
+[node name="Labels" type="Node" parent="." unique_id=1618953505]
+
+[node name="Label2" type="Label" parent="Labels" unique_id=1461694430]
+offset_left = 47.0
+offset_top = 240.0
+offset_right = 187.0
+offset_bottom = 292.0
+theme_override_fonts/font = ExtResource("7_oa1go")
+theme_override_font_sizes/font_size = 8
+text = "Arrow Keys to move
+Z to Slow down Time
+Shift to Sprint
+You can Double Jump :D
+"
+
+[node name="Label3" type="Label" parent="Labels" unique_id=392810259]
+offset_left = 43.0
+offset_top = 174.0
+offset_right = 183.0
+offset_bottom = 226.0
+theme_override_fonts/font = ExtResource("7_oa1go")
+theme_override_font_sizes/font_size = 8
+text = "You can move here"
+
+[node name="Label4" type="Label" parent="Labels" unique_id=725494308]
+offset_left = 215.0
+offset_top = 103.0
+offset_right = 395.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 32
+text = "Jump
+Knight"
+horizontal_alignment = 1
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=791450217]
 position = Vector2(311, 212)
 zoom = Vector2(2, 2)
@@ -226,47 +262,17 @@ visible = false
 position = Vector2(307, 306.00006)
 scale = Vector2(2.7, 3)
 
-[node name="Labels" type="Node" parent="." unique_id=1618953505]
+[node name="fade_transition" parent="." unique_id=1228228395 instance=ExtResource("8_tbmy8")]
+visible = false
+offset_left = -22.0
+offset_top = 1.0
+offset_right = 714.0
+offset_bottom = 490.0
 
-[node name="Label2" type="Label" parent="Labels" unique_id=1461694430]
-offset_left = 47.0
-offset_top = 240.0
-offset_right = 187.0
-offset_bottom = 292.0
-theme_override_fonts/font = ExtResource("7_oa1go")
-theme_override_font_sizes/font_size = 8
-text = "Arrow Keys to move
-Z to Slow down Time
-Shift to Sprint
-You can Double Jump :D
-"
-
-[node name="Label" type="Label" parent="Labels" unique_id=1354904013]
-anchors_preset = -1
-anchor_left = -1.9050001
-anchor_top = -5.372
-anchor_right = -1.9050001
-anchor_bottom = -5.372
-offset_left = 2340.56
-offset_top = 3573.0562
-offset_right = 2668.56
-offset_bottom = 3656.0562
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 40
-text = "Jump 
-Knight"
-horizontal_alignment = 1
-
-[node name="Label3" type="Label" parent="Labels" unique_id=392810259]
-offset_left = 43.0
-offset_top = 174.0
-offset_right = 183.0
-offset_bottom = 226.0
-theme_override_fonts/font = ExtResource("7_oa1go")
-theme_override_font_sizes/font_size = 8
-text = "You can move here"
+[node name="fade_timer" type="Timer" parent="fade_transition" unique_id=1867884138]
 
 [connection signal="pressed" from="Button Manager/Quit Game" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="Button Manager/Stage Select" to="." method="_on_stage_select_pressed"]
 [connection signal="pressed" from="Button Manager/Reset Data" to="." method="_on_reset_data_pressed"]
 [connection signal="pressed" from="Button Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="timeout" from="fade_transition/fade_timer" to="." method="_on_fade_timer_timeout"]
