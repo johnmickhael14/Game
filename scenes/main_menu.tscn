@@ -220,14 +220,6 @@ theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 16
 text = "Select Stage"
 
-[node name="Reset Data" type="Button" parent="Button Manager" unique_id=98397059]
-layout_mode = 0
-offset_left = 473.0
-offset_top = 330.0
-offset_right = 574.0
-offset_bottom = 361.0
-text = "RESET DATA"
-
 [node name="Start" type="Button" parent="Button Manager" unique_id=840737167]
 layout_mode = 1
 anchors_preset = -1
@@ -273,6 +265,5 @@ offset_bottom = 490.0
 
 [connection signal="pressed" from="Button Manager/Quit Game" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="Button Manager/Stage Select" to="." method="_on_stage_select_pressed"]
-[connection signal="pressed" from="Button Manager/Reset Data" to="." method="_on_reset_data_pressed"]
 [connection signal="pressed" from="Button Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="timeout" from="fade_transition/fade_timer" to="." method="_on_fade_timer_timeout"]

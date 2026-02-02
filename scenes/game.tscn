@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dbdhwbvqvm5k7" path="res://scenes/killzone.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://byknevy2a2yf5" path="res://scenes/player_2.tscn" id="7_u5sy4"]
 [ext_resource type="FontFile" uid="uid://buv25bl2jqk2j" path="res://assets/fonts/PixelOperator8.ttf" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://cqncnstm6of45" path="res://scenes/enemy.tscn" id="11_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -428,3 +429,6 @@ theme_override_font_sizes/font_size = 8
 text = "In Memory of 
 Melene Akil"
 horizontal_alignment = 1
+
+[node name="enemy" parent="." unique_id=1607635953 instance=ExtResource("11_kvpfn")]
+position = Vector2(-12, -11)
