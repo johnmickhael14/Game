@@ -12,7 +12,7 @@
 [ext_resource type="FontFile" uid="uid://buv25bl2jqk2j" path="res://assets/fonts/PixelOperator8.ttf" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://cqncnstm6of45" path="res://scenes/enemy.tscn" id="11_kvpfn"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("2_yqjtg")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -173,7 +173,7 @@ texture = ExtResource("2_yqjtg")
 
 [sub_resource type="TileSet" id="TileSet_lbhrr"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_lnu2h")
+sources/0 = SubResource("TileSetAtlasSource_kvuet")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u5sy4"]
 distance = -139.0
@@ -249,6 +249,7 @@ offset_bottom = 37.0
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 8
 text = "Total Coins Collected:"
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="." unique_id=992420772]
 position = Vector2(0, -31)
@@ -431,4 +432,4 @@ Melene Akil"
 horizontal_alignment = 1
 
 [node name="enemy" parent="." unique_id=1607635953 instance=ExtResource("11_kvpfn")]
-position = Vector2(-12, -11)
+position = Vector2(-28, -11)

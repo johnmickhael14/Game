@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bywctj48o6s1x"]
+
+[node name="Ending" type="Node2D" unique_id=284488137]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=268714940]
+position = Vector2(1, 0)
+zoom = Vector2(4, 4)
