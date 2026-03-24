@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name PlayerController
 
 @onready var animated_sprite=$AnimatedSprite2D
 var SPEED = 150.0
@@ -7,6 +8,7 @@ var temp_jump=0
 @onready var tile_map: TileMap = $"../TileMap"
 
 func _physics_process(delta: float) -> void:
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -56,3 +58,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	for i in range(get_slide_collision_count()):
+		var col = get_slide_collision(i)
+		var collider = col.get_collider()
+		if collider is RigidBody2D:
+			var normal = col.get_normal()
+			if abs(normal.y) < 0.3:
+				var push_dir = Vector2(normal.x, 0).normalized()
+				collider.apply_central_impulse(Vector2(25*direction, 0))

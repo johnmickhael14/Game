@@ -95,6 +95,8 @@ target_position = Vector2(7, 0)
 
 [node name="killzone" parent="." unique_id=1961241542 instance=ExtResource("2_4ra3w")]
 position = Vector2(0, 4)
+collision_layer = 4
+collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=414971316]
 position = Vector2(0, 1)
