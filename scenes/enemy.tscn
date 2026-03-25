@@ -73,10 +73,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtq4b"]
-size = Vector2(8, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
+size = Vector2(4.375, 5.59375)
 
-[node name="enemy" type="Node2D" unique_id=1607635953]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtq4b"]
+size = Vector2(10.625, 11)
+
+[node name="enemy" type="CharacterBody2D" unique_id=1973411719]
+collision_layer = 8
+collision_mask = 3
 script = ExtResource("1_4ra3w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=661571437]
@@ -93,11 +98,17 @@ target_position = Vector2(-7, 0)
 position = Vector2(0, 5)
 target_position = Vector2(7, 0)
 
+[node name="RayDown" type="RayCast2D" parent="." unique_id=1987468651]
+position = Vector2(0, 5)
+target_position = Vector2(0, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=414971316]
+position = Vector2(0, 7.796875)
+shape = SubResource("RectangleShape2D_4ra3w")
+
 [node name="killzone" parent="." unique_id=1961241542 instance=ExtResource("2_4ra3w")]
 position = Vector2(0, 4)
-collision_layer = 4
-collision_mask = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=414971316]
-position = Vector2(0, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1102209238]
+position = Vector2(0.6875, 2.5)
 shape = SubResource("RectangleShape2D_wtq4b")

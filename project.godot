@@ -19,9 +19,19 @@ run/main_scene="uid://huxl5t7rlr3y"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bv08gfjmd8fxd"
+
 [autoload]
 
 Music="*uid://ccwh2cep4j0wn"
+GameManager="*uid://bxe8hpxu56dmu"
+
+[global_group]
+
+player="player"
+box=""
 
 [input]
 
@@ -67,6 +77,7 @@ sprint={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Pickables"
 2d_physics/layer_3="KillZone"
+2d_physics/layer_4="interactables"
 2d_physics/layer_5="teleport"
 2d_physics/layer_6="lever"
 

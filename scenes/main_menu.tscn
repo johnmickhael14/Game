@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://1caqgxev5j52" path="res://scenes/OneWayDown.tscn" id="6_rtw2f"]
 [ext_resource type="FontFile" uid="uid://buv25bl2jqk2j" path="res://assets/fonts/PixelOperator8.ttf" id="7_oa1go"]
 [ext_resource type="PackedScene" uid="uid://bu7yxm61aiqhf" path="res://scenes/Fade.tscn" id="8_tbmy8"]
+[ext_resource type="PackedScene" uid="uid://dbdhwbvqvm5k7" path="res://scenes/killzone.tscn" id="9_jk1qb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wu84c"]
 texture = ExtResource("3_bqqt6")
@@ -142,6 +143,9 @@ texture = ExtResource("3_bqqt6")
 [sub_resource type="TileSet" id="TileSet_8ln24"]
 sources/0 = SubResource("TileSetAtlasSource_wu84c")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dd4i"]
+distance = -53.55836
+
 [node name="Main Menu" type="Node2D" unique_id=1899467654]
 script = ExtResource("1_l6cm7")
 
@@ -262,6 +266,13 @@ offset_right = 714.0
 offset_bottom = 490.0
 
 [node name="fade_timer" type="Timer" parent="fade_transition" unique_id=1867884138]
+
+[node name="killzone" parent="." unique_id=1153838954 instance=ExtResource("9_jk1qb")]
+position = Vector2(0, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=695907294]
+position = Vector2(305, 430)
+shape = SubResource("WorldBoundaryShape2D_5dd4i")
 
 [connection signal="pressed" from="Button Manager/Quit Game" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="Button Manager/Stage Select" to="." method="_on_stage_select_pressed"]

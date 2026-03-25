@@ -204,7 +204,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
 radius = 4.0
 
-[node name="Player" type="CharacterBody2D" unique_id=935256915]
+[node name="Player" type="CharacterBody2D" unique_id=935256915 groups=["player"]]
 z_index = 5
 collision_mask = 31
 script = ExtResource("1_g2els")
@@ -212,7 +212,7 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=837475922]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"roll"
+animation = &"kneel"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=613525946]
