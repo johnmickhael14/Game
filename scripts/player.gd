@@ -6,6 +6,7 @@ var SPEED = 150.0
 const JUMP_VELOCITY = -250.0
 var temp_jump=0
 @onready var tile_map: TileMap = $"../TileMap"
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _physics_process(delta: float) -> void:
 	
@@ -49,14 +50,16 @@ func _physics_process(delta: float) -> void:
 		SPEED=150
 		velocity.x = direction * SPEED*2
 		animated_sprite.play("roll")
-		
+	
 		
 	elif direction and not Input.is_action_pressed("sprint") and not Input.is_action_pressed("ui_down"):
 		SPEED=150
 		velocity.x = direction * SPEED 
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	#restart
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 	move_and_slide()
 	for i in range(get_slide_collision_count()):
 		var col = get_slide_collision(i)
@@ -66,3 +69,4 @@ func _physics_process(delta: float) -> void:
 			if abs(normal.y) < 0.3:
 				var push_dir = Vector2(normal.x, 0).normalized()
 				collider.apply_central_impulse(Vector2(25*direction, 0))
+				

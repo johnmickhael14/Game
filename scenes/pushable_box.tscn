@@ -7,15 +7,14 @@
 size = Vector2(16, 16)
 
 [node name="Pushable_Box" type="RigidBody2D" unique_id=1265252530 groups=["box"]]
+position = Vector2(-125, -39)
 collision_layer = 8
 collision_mask = 9
 script = ExtResource("1_34ggu")
 
 [node name="Box3_0" type="Sprite2D" parent="." unique_id=398074416]
-position = Vector2(247, 245)
 scale = Vector2(0.037656892, 0.04245283)
 texture = ExtResource("2_34ggu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=470814434 groups=["box"]]
-position = Vector2(247, 245)
 shape = SubResource("RectangleShape2D_n80c2")

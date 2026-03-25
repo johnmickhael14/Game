@@ -236,23 +236,23 @@ script = ExtResource("6_e6vpq")
 
 [node name="Sprite2D" type="ColorRect" parent="Stage 1" unique_id=1968348502]
 custom_minimum_size = Vector2(10, 0)
-offset_left = -24.0
-offset_top = -5.0
-offset_right = 57.0
-offset_bottom = 26.0
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 80.0
+offset_bottom = 24.0
 color = Color(0.16470589, 0.3764706, 0.5647059, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stage 1" unique_id=1496954687]
 modulate = Color(0.9498511, 0, 0.46226692, 1)
-position = Vector2(16.5, 10.5)
+position = Vector2(39.5, 8.5)
 shape = SubResource("RectangleShape2D_1sggn")
 
 [node name="Label5" type="Label" parent="Stage 1" unique_id=675932491]
-offset_left = -4.0
-offset_top = 6.0
-offset_right = 148.0
-offset_bottom = 58.0
+offset_left = 19.0
+offset_top = 4.0
+offset_right = 171.0
+offset_bottom = 56.0
 theme_override_fonts/font = ExtResource("2_e6vpq")
 theme_override_font_sizes/font_size = 8
 text = "Level 1"
@@ -264,25 +264,24 @@ script = ExtResource("7_o7i7e")
 
 [node name="Sprite2D" type="ColorRect" parent="Stage 2" unique_id=1361804015]
 custom_minimum_size = Vector2(10, 0)
-offset_left = 92.0
-offset_top = -4.0
-offset_right = 173.0
-offset_bottom = 27.0
+offset_left = 123.0
+offset_top = -6.0
+offset_right = 204.0
+offset_bottom = 25.0
 color = Color(0.16415134, 0.37757227, 0.5632865, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stage 2" unique_id=418699682]
-position = Vector2(133, 11)
+position = Vector2(164, 9)
 shape = SubResource("RectangleShape2D_1sggn")
 
 [node name="Label5" type="Label" parent="Stage 2" unique_id=1320467212]
-offset_left = 110.0
-offset_top = 7.0
-offset_right = 262.0
-offset_bottom = 59.0
+offset_left = 141.0
+offset_top = 5.0
+offset_right = 293.0
+offset_bottom = 57.0
 theme_override_fonts/font = ExtResource("2_e6vpq")
 theme_override_font_sizes/font_size = 8
 text = "Level 2"
-metadata/_edit_use_anchors_ = true
 
 [node name="Stage 3" type="Area2D" parent="." unique_id=1210173004]
 position = Vector2(-300, 4)
@@ -290,21 +289,21 @@ script = ExtResource("8_85aq5")
 
 [node name="Sprite2D" type="ColorRect" parent="Stage 3" unique_id=1665391802]
 custom_minimum_size = Vector2(10, 0)
-offset_left = 216.0
+offset_left = 274.0
 offset_top = -3.0
-offset_right = 297.0
+offset_right = 355.0
 offset_bottom = 28.0
 color = Color(0.16415134, 0.37757227, 0.5632865, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stage 3" unique_id=1500746867]
-position = Vector2(257, 13)
+position = Vector2(315, 13)
 shape = SubResource("RectangleShape2D_1sggn")
 
 [node name="Label5" type="Label" parent="Stage 3" unique_id=113126201]
-offset_left = 238.0
+offset_left = 296.0
 offset_top = 8.0
-offset_right = 390.0
+offset_right = 448.0
 offset_bottom = 60.0
 theme_override_fonts/font = ExtResource("2_e6vpq")
 theme_override_font_sizes/font_size = 8
@@ -317,29 +316,30 @@ script = ExtResource("9_gycth")
 
 [node name="Sprite2D" type="ColorRect" parent="Stage 4" unique_id=327500413]
 custom_minimum_size = Vector2(10, 0)
-offset_left = 326.0
-offset_top = -1.0
-offset_right = 407.0
-offset_bottom = 30.0
+offset_left = 407.0
+offset_top = -2.0
+offset_right = 488.0
+offset_bottom = 29.0
 color = Color(0.16415134, 0.37757227, 0.5632865, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stage 4" unique_id=57761537]
-position = Vector2(366, 14)
+position = Vector2(447, 13)
 shape = SubResource("RectangleShape2D_1sggn")
 
 [node name="Label5" type="Label" parent="Stage 4" unique_id=2115156385]
-offset_left = 343.0
-offset_top = 10.0
-offset_right = 495.0
-offset_bottom = 62.0
+offset_left = 424.0
+offset_top = 9.0
+offset_right = 576.0
+offset_bottom = 61.0
 theme_override_fonts/font = ExtResource("2_e6vpq")
 theme_override_font_sizes/font_size = 8
 text = "Level 4"
 metadata/_edit_use_anchors_ = true
 
 [node name="Stage 5" type="Area2D" parent="." unique_id=1786325136]
-position = Vector2(-298, 2)
+visible = false
+position = Vector2(-316, -219)
 script = ExtResource("10_gycth")
 
 [node name="Sprite2D" type="ColorRect" parent="Stage 5" unique_id=1807985778]

@@ -4,7 +4,8 @@ extends Area2D
 var inside:bool = false
 func _process(delta: float) -> void:
 	if inside and Input.is_action_just_pressed("ui_down"):
-		#get_tree().change_scene_to_file("res://scenes/game.tscn")
+		get_tree().change_scene_to_file("res://scenes/game_4.tscn")
+		GameManager.scene=4
 		print("stage4")
 func _on_body_entered(body: Node2D) -> void:
 	sprite_2d.modulate = Color(0, 1, 0)
